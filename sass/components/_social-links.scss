@@ -1,0 +1,33 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px;
+    border-radius: 50%;
+    transition: makeTransition((background-color fill));
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    fill: getColor('social-primary-fill');
+    background-color: getColor('site-background-color');
+
+    &:hover,
+    &:focus {
+      background-color: getColor('primary-background-color');
+      fill: getColor('site-background-color');
+    }
+  }
+}

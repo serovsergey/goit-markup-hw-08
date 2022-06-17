@@ -1,0 +1,41 @@
+$colors: (
+  'site-background-color': #ffffff,
+  'primary-background-color': #2196f3,
+  'secondary-background-color': #f5f4fa,
+  'footer-background-color': #2f303a,
+  'primary-text-color': #212121,
+  'secondary-text-color': #757575,
+  'selected-text-color': #ffffff,
+  'address-text-color': #ffffff,
+  'secondary-address-text-color': rgba(255, 255, 255, 0.6),
+  'current-text-color': #2196f3,
+  'line-color': #ececec,
+  'card-border-color': #eeeeee,
+  'button-hover-bg-color': #188ce8,
+  'hero-bg-color': #c4c4c4,
+  'social-primary-fill': #afb1b8,
+);
+$primary-font: 'Roboto', sans-serif;
+$logo-font: 'Raleway';
+
+$transition-duration: 250ms;
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-style: $transition-duration $transition-function;
+$grid-column-width: 70px;
+$grid-gutter-width: 30px;
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+@function makeTransition($transitionList, $delay: 0) {
+  $list: ();
+  @each $transition in $transitionList {
+    $list: append(
+      $list,
+      $transition $transition-duration $transition-function if($delay != 0, $delay, null),
+      comma
+    );
+  }
+  @return $list;
+}

@@ -1,0 +1,30 @@
+.occupations {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+  }
+
+  &__comment {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: getColor('address-text-color');
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

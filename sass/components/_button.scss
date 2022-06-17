@@ -1,0 +1,26 @@
+.button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 0;
+    border-radius: 4px;
+    color: getColor('primary-text-color');
+    background-color: getColor('secondary-background-color');
+    cursor: pointer;
+    // transition: background-color var(--transition-style), color var(--transition-style),
+    //     box-shadow var(--transition-style);
+    transition: makeTransition((background-color, color, box-shadow));
+
+    &:hover,
+    &:focus {
+        background-color: getColor('button-hover-bg-color');
+    }
+
+    &--primary {
+        color: getColor('selected-text-color');
+        background-color: getColor('primary-background-color');
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+

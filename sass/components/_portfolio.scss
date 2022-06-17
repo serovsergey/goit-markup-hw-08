@@ -1,0 +1,100 @@
+.portfolio {
+  &__filters {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  &__filter-item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__button {
+    padding: 6px 22px;
+
+    &:hover,
+    &:focus {
+      color: getColor('selected-text-color');
+      background-color: getColor('primary-background-color');
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &--primary {
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  &__item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__description {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: getColor('address-text-color');
+    background-color: getColor('primary-background-color');
+    transition: makeTransition((transform));
+  }
+
+  &__link {
+    color: inherit;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__link:hover &__description,
+  &__link:focus &__description {
+    transform: translateY(0%);
+  }
+
+  &__header {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &__type {
+    color: getColor('secondary-text-color');
+    font-size: 16px;
+    line-height: 1.88;
+  }
+
+  &__title {
+    padding: 20px 24px;
+    border: 1px solid getColor('card-border-color');
+    border-top: 0;
+  }
+}

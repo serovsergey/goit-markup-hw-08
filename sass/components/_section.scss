@@ -1,0 +1,17 @@
+.section {
+  min-width: 1200px;
+
+  &__header {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  &--vert-paddings {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
