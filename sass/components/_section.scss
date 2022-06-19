@@ -1,17 +1,22 @@
 .section {
-  min-width: 1200px;
+  max-width: 1200px;
+  min-width: 320px;
 
   &__header {
-    margin-bottom: 50px;
+    // margin-bottom: 50px; DESKTOP
+    margin-bottom: 30px;
     text-align: center;
     font-weight: 700;
-    font-size: 36px;
+    // font-size: 36px; DESKTOP
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
   }
 
   &--vert-paddings {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }

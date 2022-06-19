@@ -7,7 +7,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  width: calc(100% - 30px);
   padding: 40px;
   color: getColor('secondary-text-color');
   background-color: getColor('address-text-color');
@@ -28,8 +28,9 @@
 
   &__close-button {
     position: absolute;
-    display: block;
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 8px;
     right: 8px;
     width: 30px;
@@ -38,7 +39,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    transition: fill getColor('transition-style');
+    transition: makeTransition((fill));
   }
 
   &__close-button:hover,
@@ -48,8 +49,8 @@
 
   &__icon-close {
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 11px;
+    height: 11px;
   }
 }
 
@@ -108,12 +109,13 @@
   }
 
   &--checkbox {
+    // position: relative;
     display: flex;
     align-items: center;
-    padding-left: 37px;
-    height: 24px;
+    padding-left: 20px;
+    // height: 24px;
     margin-bottom: 30px;
-    position: relative;
+    font-size: 12px;
   }
 
   &__icon {
@@ -136,7 +138,7 @@
 
   &__check {
     position: absolute;
-    left: 14px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
     width: 16px;
@@ -157,6 +159,7 @@
 
 .request-form {
   &__agreement-link {
+    text-decoration: underline;
     color: getColor('primary-background-color');
   }
 

@@ -1,5 +1,7 @@
+$bg-overlay: rgba(47, 48, 58, 0.4);
+
 .hero {
-  height: 600px; /* calc(100vh - 80px) */
+  height: 400px; /* calc(100vh - 80px) */
   padding-top: 0;
   padding-bottom: 0;
   display: flex;
@@ -8,19 +10,37 @@
 
   background-color: getColor('hero-bg-color');
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero.jpg');
+    url('../images/hero-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from($bg-overlay),
+        to($bg-overlay)
+      ),
+      url('../images/hero-mobile@2x.jpg');
+    background-image: -o-linear-gradient($bg-overlay, $bg-overlay),
+      url('../images/hero-mobile@2x.jpg');
+    background-image: linear-gradient($bg-overlay, $bg-overlay), url('../images/hero-mobile@2x.jpg');
+  }
+
   &__title {
     display: block;
-    margin: 0 auto;
-    width: 640px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    max-width: 360px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    // line-height: 1.36; desktop
+    line-height: 1.62;
     letter-spacing: 0.06em;
     color: getColor('site-background-color');
     text-transform: uppercase;

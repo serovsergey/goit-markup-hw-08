@@ -22,11 +22,22 @@
   </head>
   <body>
     <header class="page-header section">
-      <div class="page-header__container container">
+      <div class="page-header__container container" data-menu id="page-header__container">
         <nav class="page-header__nav">
           <a href="./index.html" class="page-header__logo logo"
             ><span class="logo__web">Web</span>Studio</a
           >
+          <button
+            class="page-header__menu-button"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="page-header__container"
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="page-header__icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="page-header__icon-close" href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
           <ul class="page-header__menu no-mark">
             <li class="page-header__item">
               <a
@@ -42,27 +53,54 @@
             <li class="page-header__item"><a href="" class="page-header__link">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="page-header__addresses no-mark">
-          <li class="page-header__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="email page-header__link page-header__link--address"
-            >
-              <svg class="page-header__address-icon page-header__addresses-icon--email">
-                <use href="./images/icons.svg#icon-email"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="page-header__item">
-            <a href="tel:+380961111111" class="tel page-header__link page-header__link--address">
-              <svg class="page-header__address-icon page-header__addresses-icon--tel">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="page-header__contacts">
+          <ul class="page-header__addresses no-mark">
+            <li class="page-header__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="page-header__link page-header__link--address page-header__link--email"
+              >
+                <svg
+                  class="page-header__address-icon page-header__addresses-icon--email"
+                  width="16"
+                  height="12"
+                >
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="page-header__item">
+              <a
+                href="tel:+380961111111"
+                class="page-header__link page-header__link--address page-header__link--tel"
+              >
+                <svg
+                  class="page-header__address-icon page-header__addresses-icon--tel"
+                  width="10"
+                  height="16"
+                >
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="page-header__social-links no-mark">
+            <li class="page-header__social-links-item">
+              <a class="page-header__social-link" href="">Instagram</a>
+            </li>
+            <li class="page-header__social-links-item">
+              <a class="page-header__social-link" href="">Twitter</a>
+            </li>
+            <li class="page-header__social-links-item">
+              <a class="page-header__social-link" href="">Facebook</a>
+            </li>
+            <li class="page-header__social-links-item">
+              <a class="page-header__social-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main-page">
@@ -74,7 +112,7 @@
           </button>
         </div>
       </section>
-      <section class="features section">
+      <section class="features section section--vert-paddings">
         <div class="container">
           <h2 class="visually-hidden">Особенности</h2>
           <ul class="features__list no-mark">
@@ -132,7 +170,7 @@
             <li class="occupations__item">
               <a class="occupations__link" href="">
                 <img
-                  class="display-block"
+                  class="display-block stretchable"
                   src="./images/occupation1.jpg"
                   width="370"
                   alt="Настольный компьютер"
@@ -143,7 +181,7 @@
             <li class="occupations__item">
               <a class="occupations__link" href="">
                 <img
-                  class="display-block"
+                  class="display-block stretchable"
                   src="./images/occupation2.jpg"
                   width="370"
                   alt="Мобильный телефон и ноутбук"
@@ -154,7 +192,7 @@
             <li class="occupations__item">
               <a class="occupations__link" href="">
                 <img
-                  class="display-block"
+                  class="display-block stretchable"
                   src="./images/occupation3.jpg"
                   width="370"
                   alt="Подбор цвета"
@@ -172,9 +210,14 @@
             <li class="team__item">
               <div class="team-member">
                 <img
-                  class="display-block"
-                  src="./images/person1.jpg"
-                  width="270"
+                  class="display-block stretchable"
+                  src="./images/team/person1-mobile.jpg"
+                  srcset="
+                    ./images/team/person1-mobile.jpg    1x,
+                    ./images/team/person1-mobile@2x.jpg 2x
+                  "
+                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
+                  width="450"
                   alt="Улыбчивый чувак в очках"
                 />
                 <h3 class="team-member__fio">Игорь Демьяненко</h3>
@@ -214,9 +257,14 @@
             <li class="team__item">
               <div class="team-member">
                 <img
-                  class="display-block"
-                  src="./images/person2.jpg"
-                  width="270"
+                  class="display-block stretchable"
+                  src="./images/team/person2-mobile.jpg"
+                  srcset="
+                    ./images/team/person2-mobile.jpg    1x,
+                    ./images/team/person2-mobile@2x.jpg 2x
+                  "
+                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
+                  width="450"
                   alt="Девушка в очках"
                 />
                 <h3 class="team-member__fio">Ольга Репина</h3>
@@ -255,7 +303,17 @@
             </li>
             <li class="team__item">
               <div class="team-member">
-                <img class="display-block" src="./images/person3.jpg" width="270" alt="Весельчак" />
+                <img
+                  class="display-block stretchable"
+                  src="./images/team/person3-mobile.jpg"
+                  srcset="
+                    ./images/team/person3-mobile.jpg    1x,
+                    ./images/team/person3-mobile@2x.jpg 2x
+                  "
+                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
+                  width="450"
+                  alt="Весельчак"
+                />
                 <h3 class="team-member__fio">Николай Тарасов</h3>
                 <p class="team-member__position">Marketing</p>
                 <ul class="social-links no-mark">
@@ -293,9 +351,14 @@
             <li class="team__item">
               <div class="team-member">
                 <img
-                  class="display-block"
-                  src="./images/person4.jpg"
-                  width="270"
+                  class="display-block stretchable"
+                  src="./images/team/person4-mobile.jpg"
+                  srcset="
+                    ./images/team/person4-mobile.jpg    1x,
+                    ./images/team/person4-mobile@2x.jpg 2x
+                  "
+                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
+                  width="450"
                   alt="Загадочный чувак в очках"
                 />
                 <h3 class="team-member__fio">Михаил Ермаков</h3>
@@ -545,12 +608,12 @@
         <!-- </div> -->
       </div>
     </div>
-    <div class="support support--right">
+    <div class="visually-hidden support support--right">
       <a class="support__link" href=""></a>
       <div class="tool-tip support__tool-tip support__tool-tip--left">
         Мы Вам перезвоним может быть когда-нибудь
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
