@@ -7,9 +7,10 @@
         modal: document.querySelector("[data-modal]"),
     };
 
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+    if (refs.openModalBtn) refs.openModalBtn.addEventListener("click", toggleModal);
+    if (refs.closeModalBtn) refs.closeModalBtn.addEventListener("click", toggleModal);
     refs.menuBtn.addEventListener('click', toggleMenu);
+
 
     function toggleMenu() {
         const expanded = refs.menuBtn.getAttribute("aria-expanded") == "true" | false;

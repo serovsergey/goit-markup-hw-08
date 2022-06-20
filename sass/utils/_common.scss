@@ -5,7 +5,10 @@ body {
   letter-spacing: 0.03em;
 
   &.no-scroll {
-    overflow: hidden;
+    // TODO: disable scrolling only when modal is shown
+    @media screen and (max-width: 767px) {
+      overflow: hidden;
+    }
   }
 }
 
@@ -61,17 +64,4 @@ a {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-
-.backdrop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding: 15px;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  transform: scale(1);
-  transition: makeTransition((opacity visibility));
-  z-index: 1;
 }

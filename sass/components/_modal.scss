@@ -1,13 +1,26 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 15px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: makeTransition((opacity visibility));
+  z-index: 1;
+}
+
 .is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.5);
 }
-
 .modal {
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: calc(100% - 30px);
+  // width: calc(100% - 30px);
+  width: 450px;
   padding: 40px;
   color: getColor('secondary-text-color');
   background-color: getColor('address-text-color');
@@ -15,6 +28,11 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: makeTransition((opacity transform));
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    width: calc(100% / 3);
+  }
 
   &__title {
     display: block;
@@ -24,6 +42,10 @@
     font-size: 20px;
     line-height: 1.15;
     color: getColor('primary-text-color');
+
+    @media screen and (max-width: 1199px) {
+      line-height: 1.5;
+    }
   }
 
   &__close-button {

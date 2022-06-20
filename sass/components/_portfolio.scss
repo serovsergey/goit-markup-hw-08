@@ -1,12 +1,21 @@
 .portfolio {
   &__filters {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 50px;
-    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+    }
   }
 
-  &__filter-item:not(:last-child) {
-    margin-right: 8px;
+  &__filter-item {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 
   &__button {
