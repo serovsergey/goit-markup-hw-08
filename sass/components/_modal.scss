@@ -19,17 +19,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  // width: calc(100% - 30px);
   width: 450px;
   padding: 40px;
-  color: getColor('secondary-text-color');
-  background-color: getColor('address-text-color');
+  color: $secondary-text-color;
+  background-color: $site-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: makeTransition((opacity transform));
 
-  @media screen and (min-width: 1200px) {
+  @include breakpointFrom(desktop) {
+    // @media screen and (min-width: 1200px) {
     min-width: 528px;
     width: calc(100% / 3);
   }
@@ -41,9 +41,10 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
-    color: getColor('primary-text-color');
+    color: $primary-text-color;
 
-    @media screen and (max-width: 1199px) {
+    @include breakpointTo(desktop) {
+      // @media screen and (max-width: 1199px) {
       line-height: 1.5;
     }
   }
@@ -66,7 +67,7 @@
 
   &__close-button:hover,
   &__close-button:focus {
-    fill: getColor('primary-background-color');
+    fill: $primary-background-color;
   }
 
   &__icon-close {
@@ -87,7 +88,7 @@
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.16;
-    color: getColor('secondary-text-color');
+    color: $secondary-text-color;
   }
 
   &__wrapper {
@@ -110,7 +111,7 @@
 
     &:focus,
     &:hover {
-      border-color: getColor('primary-background-color');
+      border-color: $primary-background-color;
     }
 
     &--multiline {
@@ -127,7 +128,7 @@
 
   &__input:focus + &__icon,
   &__input:hover + &__icon {
-    fill: getColor('primary-background-color');
+    fill: $primary-background-color;
   }
 
   &--checkbox {
@@ -155,7 +156,7 @@
   }
 
   &--checkbox:focus-within {
-    outline: 1px dotted getColor('primary-background-color');
+    outline: 1px dotted $primary-background-color;
   }
 
   &__check {
@@ -165,16 +166,16 @@
     transform: translateY(-50%);
     width: 16px;
     height: 15px;
-    fill: white;
-    border: 2px solid getColor('primary-text-color');
+    fill: $site-background-color;
+    border: 2px solid $primary-text-color;
     border-radius: 2px;
     transition: makeTransition((fill background border-color));
   }
 
   &__input:checked + &__check {
-    fill: getColor('address-text-color');
-    background-color: getColor('primary-background-color');
-    border-color: getColor('primary-background-color');
+    fill: $site-background-color;
+    background-color: $primary-background-color;
+    border-color: $primary-background-color;
     border-width: 1px;
   }
 }
@@ -182,7 +183,7 @@
 .request-form {
   &__agreement-link {
     text-decoration: underline;
-    color: getColor('primary-background-color');
+    color: $primary-background-color;
   }
 
   &__submit {
@@ -195,7 +196,7 @@
 
     &:hover,
     &:focus {
-      background-color: getColor('button-hover-bg-color');
+      background-color: $button-hover-bg-color;
     }
   }
 }

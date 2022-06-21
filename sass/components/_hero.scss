@@ -1,14 +1,14 @@
 $bg-overlay: rgba(47, 48, 58, 0.4);
 
 .hero {
-  height: 400px; /* calc(100vh - 80px) */
+  height: 400px;
   padding-top: 0;
   padding-bottom: 0;
   display: flex;
   align-items: center;
   text-align: center;
 
-  background-color: getColor('hero-bg-color');
+  background-color: $hero-bg-color;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -16,33 +16,27 @@ $bg-overlay: rgba(47, 48, 58, 0.4);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero-mobile.jpg');
 
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+  @include breakpointDPR(2) {
     background-image: linear-gradient($bg-overlay, $bg-overlay), url('../images/hero-mobile@2x.jpg');
   }
 
-  @media screen and (min-width: 768px) {
+  @include breakpointFrom(tablet) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero-tablet.jpg');
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    @include breakpointDPR(2) {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url('../images/hero-tablet@2x.jpg');
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include breakpointFrom(desktop) {
     height: calc(100vh - 80px);
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero-desktop.jpg');
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    @include breakpointDPR(2) {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url('../images/hero-desktop@2x.jpg');
     }
@@ -54,11 +48,16 @@ $bg-overlay: rgba(47, 48, 58, 0.4);
     max-width: 360px;
     font-weight: 900;
     font-size: 26px;
-    // line-height: 1.36; desktop
     line-height: 1.62;
     letter-spacing: 0.06em;
-    color: getColor('site-background-color');
+    color: $site-background-color;
     text-transform: uppercase;
+
+    @include breakpointFrom(desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 600px;
+    }
   }
 
   &__button {

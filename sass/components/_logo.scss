@@ -1,12 +1,11 @@
 .logo {
-  // display: block;
   font-family: $logo-font;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: getColor('primary-text-color');
+  color: $primary-text-color;
 
   &__web {
-    color: getColor('primary-background-color');
+    color: $primary-background-color;
   }
 }

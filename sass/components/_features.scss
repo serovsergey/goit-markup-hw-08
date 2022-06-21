@@ -1,27 +1,25 @@
 .features {
-  // padding-top: 89px; desktop
   padding-top: 60px;
-  // padding-bottom: 0;
 
-  @media screen and (min-width: 768px) {
+  @include breakpointFrom(tablet) {
     &__list {
       display: flex;
       flex-wrap: wrap;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include breakpointFrom(desktop) {
     padding-top: 89px;
     padding-bottom: 0;
   }
 
   &__item {
-    @media screen and (max-width: 767px) {
+    @include breakpointTo(tablet) {
       &:not(:last-child) {
         margin-bottom: 30px;
       }
     }
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       width: calc((100% - 30px) / 2);
       &:not(:nth-child(2n)) {
         margin-right: 30px;
@@ -31,7 +29,7 @@
       }
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
       width: calc((100% - 30px * 3) / 4);
       &:not(:nth-child(4n)) {
         margin-right: 30px;
@@ -44,7 +42,7 @@
     align-items: center;
     justify-content: center;
     height: 120px;
-    background-color: getColor('secondary-background-color');
+    background-color: $secondary-background-color;
     border-radius: 4px;
     margin-bottom: 30px;
   }
@@ -54,10 +52,6 @@
     height: 70px;
   }
 
-  // &__item:not(:last-child) { DESKTOP
-  //   margin-right: 30px;
-  // }
-
   &__title {
     margin-bottom: 10px;
     font-weight: 700;
@@ -65,7 +59,7 @@
     line-height: 1.14;
     text-transform: uppercase;
     text-align: center;
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       text-align: left;
     }
   }
@@ -73,6 +67,6 @@
   &__description {
     font-size: 14px;
     line-height: 1.71;
-    color: getColor('secondary-text-color');
+    color: $secondary-text-color;
   }
 }

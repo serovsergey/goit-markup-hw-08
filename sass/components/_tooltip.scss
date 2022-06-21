@@ -1,42 +1,42 @@
 .tool-tip {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(-10px);
+  left: 10px;
+  padding: 10px;
+  font-size: 12px;
+  background-color: $secondary-background-color;
+  border: 1px solid $primary-text-color;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 0px grey;
+  transition: makeTransition((opacity), 1000ms);
+
+  &::before,
+  &::after {
+    content: '';
     position: absolute;
-    bottom: 100%;
-    transform: translateY(-10px);
-    left: 10px;
-    padding: 10px;
-    font-size: 12px;
-    background-color: getColor('secondary-background-color');
-    border: 1px solid getColor('primary-text-color');
-    border-radius: 4px;
-    box-shadow: 2px 2px 4px 0px grey;
-    transition: makeTransition((opacity), 1000ms);
+    left: 20px;
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid $primary-text-color;
+    z-index: -1;
+  }
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        left: 20px;
-        bottom: -20px;
-        border: 10px solid transparent;
-        border-top: 10px solid getColor('primary-text-color');
-        z-index: -1;
-    }
+  &::after {
+    border-top: 10px solid $secondary-background-color;
+    bottom: -19px;
+  }
 
-    &::after {
-        border-top: 10px solid getColor('secondary-background-color');
-        bottom: -19px;
-    }
+  &--right {
+    right: 10px;
+    left: unset;
+  }
 
-    &--right {
-        right: 10px;
-        left: unset;
-    }
-
-    &--right::before,
-    &--right::after {
-        right: 20px;
-        left: unset;
-    }
+  &--right::before,
+  &--right::after {
+    right: 20px;
+    left: unset;
+  }
 }

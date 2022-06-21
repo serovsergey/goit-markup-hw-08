@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Сайт веб-студии" />
     <title>Студия</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,13 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -50,7 +51,7 @@
             <li class="page-header__item">
               <a href="./portfolio.html" class="page-header__link">Портфолио</a>
             </li>
-            <li class="page-header__item"><a href="" class="page-header__link">Контакты</a></li>
+            <li class="page-header__item"><a href="/" class="page-header__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="page-header__contacts">
@@ -88,16 +89,16 @@
           </ul>
           <ul class="page-header__social-links no-mark">
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">Instagram</a>
+              <a class="page-header__social-link" href="/">Instagram</a>
             </li>
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">Twitter</a>
+              <a class="page-header__social-link" href="/">Twitter</a>
             </li>
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">Facebook</a>
+              <a class="page-header__social-link" href="/">Facebook</a>
             </li>
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">LinkedIn</a>
+              <a class="page-header__social-link" href="/">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -168,7 +169,7 @@
           <h2 class="section__header">Чем мы занимаемся</h2>
           <ul class="occupations__list no-mark">
             <li class="occupations__item">
-              <a class="occupations__link" href="">
+              <a class="occupations__link" href="/">
                 <img
                   class="display-block stretchable"
                   src="./images/occupation1-desktop.jpg"
@@ -184,7 +185,7 @@
               </a>
             </li>
             <li class="occupations__item">
-              <a class="occupations__link" href="">
+              <a class="occupations__link" href="/">
                 <img
                   class="display-block stretchable"
                   src="./images/occupation2-desktop.jpg"
@@ -200,7 +201,7 @@
               </a>
             </li>
             <li class="occupations__item">
-              <a class="occupations__link" href="">
+              <a class="occupations__link" href="/">
                 <img
                   class="display-block stretchable"
                   src="./images/occupation3-desktop.jpg"
@@ -224,47 +225,61 @@
           <ul class="team__list no-mark">
             <li class="team__item">
               <div class="team-member">
-                <img
-                  class="display-block stretchable"
-                  src="./images/team/person1-mobile.jpg"
-                  srcset="
-                    ./images/team/person1-mobile.jpg     450w,
-                    ./images/team/person1-mobile@2x.jpg  900w,
-                    ./images/team/person1-tablet.jpg     354w,
-                    ./images/team/person1-tablet@2x.jpg  708w,
-                    ./images/team/person1-desktop.jpg    270w,
-                    ./images/team/person1-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-                  width="450"
-                  alt="Улыбчивый чувак в очках"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/person1-desktop.jpg    1x,
+                      ./images/team/person1-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person1-tablet.jpg    1x,
+                      ./images/team/person1-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person1-mobile.jpg    1x,
+                      ./images/team/person1-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    class="display-block stretchable"
+                    src="./images/team/person1-mobile.jpg"
+                    width="450"
+                    alt="Улыбчивый чувак в очках"
+                  />
+                </picture>
                 <h3 class="team-member__fio">Игорь Демьяненко</h3>
                 <p class="team-member__position">Product Designer</p>
                 <ul class="social-links no-mark">
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -275,47 +290,61 @@
             </li>
             <li class="team__item">
               <div class="team-member">
-                <img
-                  class="display-block stretchable"
-                  src="./images/team/person2-mobile.jpg"
-                  srcset="
-                    ./images/team/person2-mobile.jpg     450w,
-                    ./images/team/person2-mobile@2x.jpg  900w,
-                    ./images/team/person2-tablet.jpg     354w,
-                    ./images/team/person2-tablet@2x.jpg  708w,
-                    ./images/team/person2-desktop.jpg    270w,
-                    ./images/team/person2-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-                  width="450"
-                  alt="Девушка в очках"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/person2-desktop.jpg    1x,
+                      ./images/team/person2-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person2-tablet.jpg    1x,
+                      ./images/team/person2-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person2-mobile.jpg    1x,
+                      ./images/team/person2-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    class="display-block stretchable"
+                    src="./images/team/person2-mobile.jpg"
+                    width="450"
+                    alt="Девушка в очках"
+                  />
+                </picture>
                 <h3 class="team-member__fio">Ольга Репина</h3>
                 <p class="team-member__position">Frontend Developer</p>
                 <ul class="social-links no-mark">
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -326,47 +355,61 @@
             </li>
             <li class="team__item">
               <div class="team-member">
-                <img
-                  class="display-block stretchable"
-                  src="./images/team/person3-mobile.jpg"
-                  srcset="
-                    ./images/team/person3-mobile.jpg     450w,
-                    ./images/team/person3-mobile@2x.jpg  900w,
-                    ./images/team/person3-tablet.jpg     354w,
-                    ./images/team/person3-tablet@2x.jpg  708w,
-                    ./images/team/person3-desktop.jpg    270w,
-                    ./images/team/person3-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-                  width="450"
-                  alt="Весельчак"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/person3-desktop.jpg    1x,
+                      ./images/team/person3-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person3-tablet.jpg    1x,
+                      ./images/team/person3-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person3-mobile.jpg    1x,
+                      ./images/team/person3-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    class="display-block stretchable"
+                    src="./images/team/person3-mobile.jpg"
+                    width="450"
+                    alt="Весельчак"
+                  />
+                </picture>
                 <h3 class="team-member__fio">Николай Тарасов</h3>
                 <p class="team-member__position">Marketing</p>
                 <ul class="social-links no-mark">
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -377,47 +420,61 @@
             </li>
             <li class="team__item">
               <div class="team-member">
-                <img
-                  class="display-block stretchable"
-                  src="./images/team/person4-mobile.jpg"
-                  srcset="
-                    ./images/team/person4-mobile.jpg     450w,
-                    ./images/team/person4-mobile@2x.jpg  900w,
-                    ./images/team/person4-tablet.jpg     354w,
-                    ./images/team/person4-tablet@2x.jpg  708w,
-                    ./images/team/person4-desktop.jpg    270w,
-                    ./images/team/person4-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-                  width="450"
-                  alt="Загадочный чувак в очках"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/person4-desktop.jpg    1x,
+                      ./images/team/person4-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person4-tablet.jpg    1x,
+                      ./images/team/person4-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/person4-mobile.jpg    1x,
+                      ./images/team/person4-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:480px)"
+                  />
+                  <img
+                    class="display-block stretchable"
+                    src="./images/team/person4-mobile.jpg"
+                    width="450"
+                    alt="Загадочный чувак в очках"
+                  />
+                </picture>
                 <h3 class="team-member__fio">Михаил Ермаков</h3>
                 <p class="team-member__position">UI Designer</p>
                 <ul class="social-links no-mark">
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-links__item">
-                    <a class="social-links__link" href="">
+                    <a class="social-links__link" href="/">
                       <svg class="social-links__icon">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -434,42 +491,42 @@
           <h2 class="section__header">Постоянные клиенты</h2>
           <ul class="clients__list no-mark">
             <li class="clients__item">
-              <a class="clients__link" href="">
+              <a class="clients__link" href="/">
                 <svg class="clients__icon">
                   <use href="./images/icons.svg#icon-company1"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link" href="">
+              <a class="clients__link" href="/">
                 <svg class="clients__icon">
                   <use href="./images/icons.svg#icon-company2"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link" href="">
+              <a class="clients__link" href="/">
                 <svg class="clients__icon">
                   <use href="./images/icons.svg#icon-company3"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link" href="">
+              <a class="clients__link" href="/">
                 <svg class="clients__icon">
                   <use href="./images/icons.svg#icon-company4"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link" href="">
+              <a class="clients__link" href="/">
                 <svg class="clients__icon">
                   <use href="./images/icons.svg#icon-company5"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link" href="">
+              <a class="clients__link" href="/">
                 <svg class="clients__icon">
                   <use href="./images/icons.svg#icon-company6"></use>
                 </svg>
@@ -514,28 +571,28 @@
           <p class="page-footer__social-networks-title">Присоединяйтесь</p>
           <ul class="page-footer__social-links social-links no-mark">
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -626,7 +683,7 @@
             </svg>
             <span
               >Соглашаюсь с рассылкой и принимаю
-              <a class="request-form__agreement-link" href="">Условия договора</a></span
+              <a class="request-form__agreement-link" href="/">Условия договора</a></span
             >
             <div class="tool-tip">
               Советуем внимательно почитать пункты <small>мелким</small> шрифтом
@@ -640,7 +697,7 @@
       </div>
     </div>
     <div class="visually-hidden support support--right">
-      <a class="support__link" href=""></a>
+      <a class="support__link" href="/"></a>
       <div class="tool-tip support__tool-tip support__tool-tip--left">
         Мы Вам перезвоним может быть когда-нибудь
       </div>

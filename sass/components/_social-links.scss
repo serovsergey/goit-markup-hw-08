@@ -21,13 +21,13 @@
   }
 
   &__link {
-    fill: getColor('social-primary-fill');
-    background-color: getColor('site-background-color');
+    fill: $social-primary-fill;
+    background-color: $site-background-color;
 
     &:hover,
     &:focus {
-      background-color: getColor('primary-background-color');
-      fill: getColor('site-background-color');
+      background-color: $primary-background-color;
+      fill: $site-background-color;
     }
   }
 }

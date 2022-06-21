@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  border-bottom: 1px solid getColor('line-color');
+  border-bottom: 1px solid $line-color;
 
   &__logo {
     display: flex;
@@ -18,7 +18,7 @@
     border: none;
     background-color: transparent;
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       display: none;
     }
   }
@@ -27,19 +27,19 @@
     min-height: 60px;
     display: flex;
     justify-content: space-between;
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       min-height: 80px;
     }
   }
 
   &__menu {
     display: none;
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       display: flex;
       margin-left: 88px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
       margin-left: 93px;
     }
     // font-size: 40px;
@@ -49,13 +49,13 @@
   &__item {
     display: flex;
 
-    @media screen and (max-width: 767px) {
+    @include breakpointTo(tablet) {
       &:not(:last-child) {
         margin-bottom: 32px;
       }
     }
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       position: relative;
 
       &:not(:last-child) {
@@ -65,18 +65,18 @@
   }
 
   &__address-item {
-    @media screen and (max-width: 767px) {
+    @include breakpointTo(tablet) {
       &:nth-child(n + 2) {
         margin-bottom: 32px;
       }
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      &:not(:last-child) {
-        // margin-bottom: 10px;
-      }
-    }
+    // @include breakpointBetween(tablet, desktop) {}
+    //   &:not(:last-child) {
+    //     // margin-bottom: 10px;
+    //   }
+    // }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
       display: flex;
       &:not(:last-child) {
         margin-right: 30px;
@@ -90,10 +90,10 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: getColor('primary-text-color');
+    color: $primary-text-color;
     transition: makeTransition((color, fill));
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       display: flex;
       align-items: center;
       font-size: 14px;
@@ -105,7 +105,7 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: getColor('current-text-color');
+        background-color: $current-text-color;
         border-radius: 2px;
       }
     }
@@ -113,14 +113,14 @@
     &--current,
     &:hover,
     &:focus {
-      color: getColor('current-text-color');
+      color: $current-text-color;
       fill: currentColor;
     }
   }
 
   &__contacts {
     display: none;
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       display: flex;
       justify-content: space-between;
     }
@@ -128,44 +128,44 @@
   &__addresses {
     display: flex;
     flex-direction: column-reverse;
-    @media screen and (max-width: 767px) {
+    @include breakpointTo(tablet) {
       margin-bottom: 64px;
     }
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       flex-direction: column;
       justify-content: center;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
       flex-direction: row;
       justify-content: flex-start;
-      // align-items: center;
     }
   }
 
   &__link--tel {
     font-size: 34px;
-    color: getColor('current-text-color');
+    color: $current-text-color;
   }
 
   &__link--email {
     font-size: 24px;
-    color: getColor('secondary-text-color');
+    color: $secondary-text-color;
   }
 
   &__link--address {
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       font-size: 12px;
-      color: getColor('secondary-text-color');
+      color: $secondary-text-color;
       fill: currentColor;
-      @media screen and (max-width: 1199px) {
+
+      @include breakpointTo(desktop) {
         padding-top: 5px;
         padding-bottom: 5px;
       }
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
       font-size: 14px;
     }
   }
@@ -173,7 +173,7 @@
   &__address-icon {
     display: none;
     margin-right: 10px;
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       display: block;
     }
   }
@@ -182,7 +182,7 @@
 
   &__social-links {
     display: flex;
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
       display: none;
     }
 
@@ -210,7 +210,7 @@
     font-weight: 500;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    color: getColor('primary-background-color');
+    color: $primary-background-color;
   }
 
   &__icon-close {
@@ -239,18 +239,18 @@
   justify-content: space-between;
   transition: makeTransition((all));
 
-  @media screen and (min-width: 768px) {
+  @include breakpointFrom(tablet) {
     flex-direction: row;
   }
   &.is-open {
-    @media screen and (max-width: 767px) {
+    @include breakpointTo(tablet) {
       position: absolute;
       left: 0;
       top: 0;
       width: 100vw;
       height: 100vh;
       padding: 48px 40px;
-      background-color: #fff;
+      background-color: $site-background-color;
       z-index: 999;
 
       .page-header__menu-button {
@@ -272,60 +272,3 @@
     }
   }
 }
-
-//   &__logo {
-//     padding-top: 24px;
-//     padding-bottom: 25px;
-//     margin-right: 93px;
-//   }
-
-//   &__nav,
-//   &__addresses {
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   &__menu {
-//     display: flex;
-//   }
-
-//   &__link {
-//     display: block;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//     font-size: 14px;
-//     font-weight: 500;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//     color: var(--primary-text-color);
-//     transition: makeTransition((color, fill));
-
-//     &--current,
-//     &:hover,
-//     &:focus {
-//       color: getColor('primary-background-color');
-//       fill: currentColor;
-//     }
-//   }
-
-//   &__address-icon {
-//     margin-right: 10px;
-//   }
-
-//   &__link--address {
-//     color: getColor('secondary-text-color');
-//     fill: getColor('secondary-text-color');
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   &__link--current::after {
-//     content: '';
-//     position: absolute;
-//     bottom: -1px;
-//     left: 0;
-//     width: 100%;
-//     height: 4px;
-//     background-color: getColor('current-text-color');
-//     border-radius: 2px;
-//   }

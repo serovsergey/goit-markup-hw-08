@@ -28,8 +28,8 @@
     padding: 10px;
     font-size: 12px;
     transform: scale(0.5) translate(-25%, 100%);
-    background-color: getColor('secondary-background-color');
-    border: 1px solid getColor('primary-text-color');
+    background-color: $secondary-background-color;
+    border: 1px solid $primary-text-color;
     border-radius: 4px;
     box-shadow: 2px 2px 4px 0px grey;
     transition: makeTransition((opacity transform), 100ms);

@@ -1,10 +1,8 @@
+@import './utils/modern-normalize';
 @import './utils/variables';
-// @import './utils/fonts';
-
+@import './utils/mixins';
 @import './utils/common';
-@import './components/button';
 
-@import './components/section';
 @import './components/header';
 
 @import './components/logo';

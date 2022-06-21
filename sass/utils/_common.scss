@@ -1,7 +1,7 @@
 body {
   font-family: $primary-font;
-  color: getColor('primary-text-color');
-  background-color: getColor('site-background-color');
+  color: $primary-text-color;
+  background-color: $site-background-color;
   letter-spacing: 0.03em;
 
   &.no-scroll {
@@ -64,4 +64,55 @@ a {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  border: 0;
+  border-radius: 4px;
+  color: $primary-text-color;
+  background-color: $secondary-background-color;
+  cursor: pointer;
+  transition: makeTransition((background-color, color, box-shadow));
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-bg-color;
+  }
+
+  &--primary {
+    color: $selected-text-color;
+    background-color: $primary-background-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.section {
+  min-width: 320px;
+
+  &__header {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+  }
+
+  &--vert-paddings {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+  }
 }

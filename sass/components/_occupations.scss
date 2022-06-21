@@ -29,7 +29,7 @@
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    color: getColor('address-text-color');
+    color: $address-text-color;
     background-color: rgba(47, 48, 58, 0.8);
   }
 }

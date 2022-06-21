@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Примеры работ веб-студии" />
     <title>Портфолио</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,13 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -47,7 +48,7 @@
                 >Портфолио</a
               >
             </li>
-            <li class="page-header__item"><a href="" class="page-header__link">Контакты</a></li>
+            <li class="page-header__item"><a href="/" class="page-header__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="page-header__contacts">
@@ -85,16 +86,16 @@
           </ul>
           <ul class="page-header__social-links no-mark">
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">Instagram</a>
+              <a class="page-header__social-link" href="/">Instagram</a>
             </li>
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">Twitter</a>
+              <a class="page-header__social-link" href="/">Twitter</a>
             </li>
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">Facebook</a>
+              <a class="page-header__social-link" href="/">Facebook</a>
             </li>
             <li class="page-header__social-links-item">
-              <a class="page-header__social-link" href="">LinkedIn</a>
+              <a class="page-header__social-link" href="/">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -128,15 +129,37 @@
           </ul>
           <ul class="portfolio__list no-mark">
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/technocrack.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project1-desktop.jpg    1x,
+                        ./images/portfolio/project1-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project1-tablet.jpg    1x,
+                        ./images/portfolio/project1-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project1-mobile.jpg    1x,
+                        ./images/portfolio/project1-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project1-mobile.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -150,15 +173,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/new_orlean.jpg"
-                    alt="Баскетоболисты"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project2-desktop.jpg    1x,
+                        ./images/portfolio/project2-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project2-tablet.jpg    1x,
+                        ./images/portfolio/project2-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project2-mobile.jpg    1x,
+                        ./images/portfolio/project2-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project2-mobile.jpg"
+                      alt="Баскетоболисты"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -172,15 +217,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/seafood.jpg"
-                    alt="Рыбка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project3-desktop.jpg    1x,
+                        ./images/portfolio/project3-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project3-tablet.jpg    1x,
+                        ./images/portfolio/project3-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project3-mobile.jpg    1x,
+                        ./images/portfolio/project3-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project3-mobile.jpg"
+                      alt="Рыбка"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -194,15 +261,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/prime.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project4-desktop.jpg    1x,
+                        ./images/portfolio/project4-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project4-tablet.jpg    1x,
+                        ./images/portfolio/project4-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project4-mobile.jpg    1x,
+                        ./images/portfolio/project4-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project4-mobile.jpg"
+                      alt="Наушники"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -216,15 +305,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/boxes.jpg"
-                    alt="Коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project5-desktop.jpg    1x,
+                        ./images/portfolio/project5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project5-tablet.jpg    1x,
+                        ./images/portfolio/project5-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project5-mobile.jpg    1x,
+                        ./images/portfolio/project5-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project5-mobile.jpg"
+                      alt="Коробки"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -238,15 +349,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/inspiration.jpg"
-                    alt="Apple iMac"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project6-desktop.jpg    1x,
+                        ./images/portfolio/project6-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project6-tablet.jpg    1x,
+                        ./images/portfolio/project6-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project6-mobile.jpg    1x,
+                        ./images/portfolio/project6-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project6-mobile.jpg"
+                      alt="Apple iMac"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -260,15 +393,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/limited_edition.jpg"
-                    alt="Книга"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project7-desktop.jpg    1x,
+                        ./images/portfolio/project7-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project7-tablet.jpg    1x,
+                        ./images/portfolio/project7-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project7-mobile.jpg    1x,
+                        ./images/portfolio/project7-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project7-mobile.jpg"
+                      alt="Книга"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -282,15 +437,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/lab.jpg"
-                    alt="Этикетка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project8-desktop.jpg    1x,
+                        ./images/portfolio/project8-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project8-tablet.jpg    1x,
+                        ./images/portfolio/project8-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project8-mobile.jpg    1x,
+                        ./images/portfolio/project8-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project8-mobile.jpg"
+                      alt="Этикетка"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -304,15 +481,37 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="/" class="portfolio__link">
                 <div class="portfolio__wrapper">
-                  <img
-                    class="display-block"
-                    src="./images/growing_business.jpg"
-                    alt="Набор текста"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project9-desktop.jpg    1x,
+                        ./images/portfolio/project9-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project9-tablet.jpg    1x,
+                        ./images/portfolio/project9-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project9-mobile.jpg    1x,
+                        ./images/portfolio/project9-mobile@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      class="display-block stretchable"
+                      src="./images/portfolio/project9-mobile.jpg"
+                      alt="Набор текста"
+                      width="450"
+                    />
+                  </picture>
                   <p class="portfolio__description">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -364,28 +563,28 @@
           <p class="page-footer__social-networks-title">Присоединяйтесь</p>
           <ul class="page-footer__social-links social-links no-mark">
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-links__item">
-              <a class="page-footer__social-link social-links__link" href="">
+              <a class="page-footer__social-link social-links__link" href="/">
                 <svg class="social-links__icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -415,7 +614,7 @@
       </div>
     </footer>
     <div class="visually-hidden support support--right">
-      <a class="support__link" href=""></a>
+      <a class="support__link" href="/"></a>
       <div class="tool-tip support__tool-tip support__tool-tip--left">
         Мы Вам перезвоним может быть когда-нибудь
       </div>
