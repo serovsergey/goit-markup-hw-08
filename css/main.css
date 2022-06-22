@@ -680,7 +680,7 @@ a {
     height: 100vh;
     padding: 48px 40px;
     background-color: #ffffff;
-    z-index: 999;
+    z-index: 2;
   }
   .page-header__container.is-open .page-header__menu-button {
     position: absolute;
@@ -771,7 +771,7 @@ a {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    max-width: 600px;
+    max-width: 620px;
   }
 }
 
