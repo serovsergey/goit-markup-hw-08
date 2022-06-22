@@ -306,6 +306,24 @@ a {
   margin: 0 auto;
 }
 
+@media only screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
