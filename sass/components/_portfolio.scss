@@ -59,6 +59,7 @@
     @include breakpointFrom(tablet) {
       width: calc((100% - 2 * 30px) / 2);
       margin: 15px;
+      display: flex;
     }
 
     @include breakpointFrom(desktop) {
@@ -91,6 +92,8 @@
 
   &__link {
     color: inherit;
+    display: flex;
+    flex-direction: column;
 
     &:hover,
     &:focus {
@@ -122,5 +125,6 @@
     padding: 20px 24px;
     border: 1px solid $card-border-color;
     border-top: 0;
+    flex-grow: 1;
   }
 }

@@ -1135,6 +1135,7 @@ a {
   .portfolio__item {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
+    display: flex;
   }
 }
 
@@ -1169,6 +1170,8 @@ a {
 
 .portfolio__link {
   color: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio__link:hover, .portfolio__link:focus {
@@ -1198,6 +1201,7 @@ a {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: 0;
+  flex-grow: 1;
 }
 
 .page-footer, .page-footer__link {
