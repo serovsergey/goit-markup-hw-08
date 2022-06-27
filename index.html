@@ -630,51 +630,53 @@
         </button>
         <!-- <div class="modal__content"> -->
         <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
-        <form action="" class="request-form" name="request-form" autocomplete="on">
+        <form action="/" class="request-form" name="request-form" autocomplete="on">
           <label class="form-field">
             <span class="form-field__label">Имя</span>
-            <div class="form-field__wrapper">
+            <span class="form-field__wrapper">
               <input class="form-field__input" name="person" type="text" />
               <svg class="form-field__icon">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
-              <div class="tool-tip">Как к Вам обращаться?</div>
-            </div>
+              <span class="tool-tip">Как к Вам обращаться?</span>
+            </span>
           </label>
           <label class="form-field">
             <span class="form-field__label">Телефон</span>
-            <div class="form-field__wrapper">
+            <span class="form-field__wrapper">
               <input class="form-field__input" name="phone" type="tel" />
               <svg class="form-field__icon">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
-              <div class="tool-tip">
+              <span class="tool-tip">
                 Напишите свой телефон, и мы будем Вам слать всякие рассылки с распродажами
-              </div>
-            </div>
+              </span>
+            </span>
           </label>
           <label class="form-field">
             <span class="form-field__label">Почта</span>
-            <div class="form-field__wrapper">
+            <span class="form-field__wrapper">
               <input class="form-field__input" name="email" type="email" autocomplete="email" />
               <svg class="form-field__icon">
                 <use href="./images/icons.svg#icon-email-edit"></use>
               </svg>
-              <div class="tool-tip">Напишите сюда свою почту, и мы заспамим Вас всякой фигнёй</div>
-            </div>
+              <span class="tool-tip"
+                >Напишите сюда свою почту, и мы заспамим Вас всякой фигнёй</span
+              >
+            </span>
           </label>
           <label class="form-field">
             <span class="form-field__label">Комментарий</span>
-            <div class="form-field__wrapper">
+            <span class="form-field__wrapper">
               <textarea
                 class="form-field__input form-field__input--multiline form-field__input--extra-margin"
                 name="comment"
                 placeholder="Введите текст"
               ></textarea>
-              <div class="tool-tip">
+              <span class="tool-tip">
                 Тут можно пофилософствовать на вольную тему, мы все равно это не читаем
-              </div>
-            </div>
+              </span>
+            </span>
           </label>
           <label class="form-field form-field--checkbox">
             <input class="form-field__input visually-hidden" type="checkbox" name="accept" />
@@ -685,9 +687,9 @@
               >Соглашаюсь с рассылкой и принимаю
               <a class="request-form__agreement-link" href="/">Условия договора</a></span
             >
-            <div class="tool-tip">
+            <span class="tool-tip">
               Советуем внимательно почитать пункты <small>мелким</small> шрифтом
-            </div>
+            </span>
           </label>
           <button class="request-form__submit button button--primary" type="submit">
             Отправить
